@@ -1,0 +1,324 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html{
+  font-size: 62.5%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  padding: 10px;
+  text-align: center;
+  /* background-image: linear-gradient(to left bottom, #33c487, #00bb9e, #00b1ae, #00a5b7, #0a98b7); */
+  background-image: linear-gradient(to right top, #051937, #004066, #006c87, #009992, #33c487);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  color: #000;
+  font-size: 1.5rem;
+
+  transition: all ease-in-out 0.5s;
+}
+
+header{
+  padding: 25px 0 10px;
+}
+
+header img{
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+header ul,
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+header li a{
+  display: block;
+  margin-top: 10px;
+
+  color: #000;
+  font-size: 1.65rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header li a img{
+  height: 45px;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section form{
+  padding-top: 15px;
+  max-width: 100%;
+}
+
+form label{
+  display: block;
+  padding: 10px 0;
+}
+
+form input,
+form button#btn{
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: transparent;
+  padding: 12px 10px;
+}
+
+form input{
+  max-width: 100%;
+}
+
+form input::placeholder{
+  color: rgb(54, 54, 54);
+}
+
+div.cards-container{
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+div.pokemon-card{
+  margin: 10px 0;
+  padding: 15px 10px;
+  width: 46%;
+  min-height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgb(233, 233, 233);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+div.pokemon-card:hover{
+  transform: scale(1.03);
+  transition: 0.5s ease-in-out all;
+}
+
+.pokemon-img{
+  max-width: 90%;
+}
+
+.pokemon-card h3{
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pokemon-card ul,
+.pokemon-types ul{
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-card li,
+.pokemon-types li{
+  margin: 3px;
+  padding: 5px 10px;
+  background-color: green;
+  border-radius: 10px;
+
+  color: #fff;
+}
+
+/* STYLES FOR THE POKEMON DETAILS CARD POP-UP */
+.pokemon-details-popup.is-active{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 12px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+
+  transition: all 0.5s ease;
+
+  z-index: 5;
+}
+
+.pokemon-details-popup button.hide-close-btn{
+  opacity: 0;
+}
+
+.pokemon-details-popup button.is-active{
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-overall-container h3,
+.pokemon-other-details h4{
+  width: fit-content;
+  margin: 15px auto;
+  padding-bottom: 1px;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+}
+
+.pokemon-details-popup button img{
+  display: inline-block;
+  width: 15px;
+}
+
+.pokemon-details-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-img-and-type img{
+  max-width: 75%;
+}
+
+.pokemon-other-details{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.pokemon-other-details > *{
+  width: 47%;
+}
+
+.pokemon-stats li,
+.pokemon-abilities li{
+  padding-bottom: 5px;
+
+  text-transform: capitalize;
+}
+
+.pokemon-other-details .pokemon-weight-height{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-weight-height p{
+  padding: 5px 10px;
+}
+
+div.overlay.is-active{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 3;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/* MEDIA QUERIES
+/*******************************************/
+@media screen and (min-width: 650px){
+  body{
+    font-size: 2rem;
+  }
+  
+  header img{
+    height:175px;
+  }  
+
+  header li a img{
+    height: 55px;
+  }
+
+  form input,
+  form button#btn{
+    padding: 15px 10px;
+  }
+
+  div.cards-container{
+    width: 85%;
+  }
+
+  div.pokemon-card{
+    width: 31%;
+  }
+
+  .pokemon-card li{
+    font-size: 2rem;
+  }  
+
+  .pokemon-details-popup{
+    max-width: 90%;
+    padding: 35px 15px;;
+  }
+
+  .pokemon-details-container{
+    flex-direction: row;
+  }
+
+  .pokemon-details-container > *{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  div.pokemon-card{
+    width: 23%;
+  }
+
+  .pokemon-details-popup{
+    max-width:75vw;
+  }
+}
+
+@media screen and (min-width: 1280px){
+  div.cards-container{
+    width: 75vw;
+  }
+
+  .pokemon-details-popup{
+    max-width:70vw;
+  } 
+}
