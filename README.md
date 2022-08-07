@@ -1,5 +1,5 @@
-# The Cocktail Bar
-This Web Application helps visitor pick a drink during any occassion
+# Pokemon-pedia
+This Web Application helps to get more information about any pokemon
 
 **Link to project:** https://pokecardds.netlify.app/
 
