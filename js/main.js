@@ -44,10 +44,10 @@ function getFetch(){
             // Call the createAndShowCard function to populate the DOM with the results;
             createAndShowCard(data);
 
-            // Wait for all pokemons to be generated then call the popup function to create and show popups
+            // Wait 2 seconds for all pokemons to be generated then call the popup function to add the necessary event listeners for creating and showing popups
             setTimeout(() => {
               forPopup();
-            }, 1000);
+            }, 2000);
           })
           .catch(err => {
               console.log(`error ${err}`)
