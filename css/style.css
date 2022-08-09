@@ -86,6 +86,12 @@ form button#btn{
   padding: 12px 10px;
 }
 
+form button,
+.div.pokemon-card,
+.pokemon-details-popup button.hide-close-btn{
+  cursor: pointer;
+}
+
 form input{
   max-width: 100%;
 }
