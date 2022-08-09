@@ -47,7 +47,7 @@ function getFetch(){
             // Wait 2 seconds for all pokemons to be generated then call the popup function to add the necessary event listeners for creating and showing popups
             setTimeout(() => {
               forPopup();
-            }, 2000);
+            }, 2500);
           })
           .catch(err => {
               console.log(`error ${err}`)
