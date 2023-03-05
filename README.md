@@ -2,7 +2,7 @@
 
 This Web Application helps to get more information about any pokemon
 
-**Link to project:** https://pokemon-pedia-v1.netlify.app/
+**Link to project:** https://pokemon-pedia-v1.vercel.app/
 
 ![alt tag](img/gif1.gif)
 
